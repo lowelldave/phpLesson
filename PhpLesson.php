@@ -13,12 +13,13 @@ class PhpLesson {
     */
     private $variable01 = 'String';
     public $variable02 = 'string not changed';
+    public $variable03;
 
     /**
      * __construct is a php default function that runs upon instantiation of a class.
     */
-    public function __construct() {
-        echo 'Constructor!!';
+    public function __construct($param = null) {
+        $this->variable03 = $param;
     }
 
     /**
@@ -36,24 +37,19 @@ class PhpLesson {
     public function method03 ($param) {
         $this->variable02 = $param;
     }
+
+    public function method04 () {
+        echo $this->variable03;
+    }
 }
 
-/**
- * Since everything we have discussed is just parts of a class, it cannot run by itself so you need to instantiate it so you can use it on you will.
-*/
-$lesson = new PhpLesson;
 
 /**
- * Here I created a simple function call on how the method is called.
+ * Here we instantiate again PhpLesson but we added some parameter to set value to the default values of the class
 */
-echo $lesson->method01();
+$lesson02 = new PhpLesson('contruct string');
 
-/**
- * Here We echo the initial value of variable02 then I changed the value of the variable02 using the function we created in the class then echo it again.
-*/
-echo $lesson->variable02;
-$lesson->method03('String changed');
-echo $lesson->variable02;
+$lesson02->method04();
 
 ?>
 
