@@ -1,0 +1,45 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #e3e3e3;
+}
+
+.c-lesson {
+    display: block;
+}
+.c-lesson__header {
+    width: 100%;
+    font-size: 1.5em;
+    font-family: Dosis;
+}
+.c-lesson__body {
+    display: block;
+}
+.c-lesson__form {
+    display: flex;
+    flex-direction: row;
+}
+.c-lesson__label {
+    font-size: 1em;
+    font-family: Dosis;
+    font-weight: 500;
+}
+.c-lesson__input {
+    padding-right: .5em;
+    padding-left: .5em;
+}
+.c-lesson__submit {
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+
+    font-family: Dosis;
+    font-weight: 500;
+    font-size: 1em;
+}
+.l-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: .5em;
+}
